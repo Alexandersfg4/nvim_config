@@ -35,6 +35,8 @@ return packer.startup(function(use)
 
   use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 
+  use("rebelot/kanagawa.nvim") -- light colorscheme
+
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
   use("szw/vim-maximizer") -- maximizes and restores current window
@@ -84,7 +86,6 @@ return packer.startup(function(use)
       { "nvim-treesitter/nvim-treesitter" },
     },
   }) -- enhanced lsp uis
-  use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
   -- formatting & linting
@@ -112,9 +113,6 @@ return packer.startup(function(use)
 
   -- Go plugin
   use("fatih/vim-go")
-
-  -- Python virtual env plugin
-  use("AckslD/swenv.nvim")
 
   -- New terminal plugin
   use("akinsho/toggleterm.nvim")
