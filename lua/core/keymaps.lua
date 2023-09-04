@@ -61,4 +61,6 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- terminal setup
-keymap.set("t", "<leader>q", ':lua NTGlobal["terminal"]:toggle()<cr>')
+-- keymap.set("t", "<leader>q", ':lua NTGlobal["terminal"]:toggle()<cr>')
+keymap.set("n", "to", '<CMD>lua require("FTerm").toggle()<CR>') -- mapping to restart lsp if necessary
+keymap.set("n", "tp", "<CMD>GoTestProject<CR>") -- mapping to restart lsp if necessary

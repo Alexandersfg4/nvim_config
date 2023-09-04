@@ -106,9 +106,8 @@ return packer.startup(function(use)
   -- Go plugin
   use("fatih/vim-go")
 
-  -- New terminal plugin
-  use("akinsho/toggleterm.nvim")
-
+  -- Floating teminal plugin
+  use("numToStr/FTerm.nvim")
   -- Chat GPT plugin
   use("madox2/vim-ai")
 
