@@ -103,9 +103,6 @@ return packer.startup(function(use)
   -- make scrolloff go past the end of the file
   use("Aasim-A/scrollEOF.nvim")
 
-  -- Go plugin
-  use("fatih/vim-go")
-
   -- Floating teminal plugin
   use("numToStr/FTerm.nvim")
   -- Chat GPT plugin

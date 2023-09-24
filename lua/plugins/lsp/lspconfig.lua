@@ -33,6 +33,7 @@ local on_attach = function(client, bufnr)
     keymap.set("n", "<leader>fu", ":GoReferrers<CR>") -- find usages
     keymap.set("n", "<leader>ta", ":GoTest<CR>") -- run all tests
     keymap.set("n", "<leader>tf", ":GoTestFunc<CR>") -- run seleceted test
+    keymap.set("n", "<leader>tp", '<CMD>lua require("FTerm").run({ "go", "test", "./...", "-v" } )<CR>') -- run all tests requrcevly
   end
 end
 
