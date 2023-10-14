@@ -63,7 +63,12 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- terminal setup
-keymap.set("n", "<leader>to", '<CMD>lua require("FTerm").open()<CR>') -- to run terminal
+keymap.set("n", "<leader>tr", '<CMD>lua require("FTerm").open()<CR>') -- to run terminal
 keymap.set("t", "<leader>tc", '<CMD>lua require("FTerm").close()<CR>') -- to close terminal and save session
 keymap.set("n", "<leader>tc", '<CMD>lua require("FTerm").close()<CR>') -- to close terminal and save session
-keymap.set("t", "<leader>te", '<CMD>lua require("FTerm").exit()<CR>') -- to close terminal
+keymap.set("t", "<leader>tq", '<CMD>lua require("FTerm").exit()<CR>') -- to quit terminal
+keymap.set("n", "<leader>tq", '<CMD>lua require("FTerm").exit()<CR>') -- to quit terminal
+
+-- vim-test keymaps
+keymap.set("n", "<leader>ta", ":TestFile<CR>") -- run all tests
+keymap.set("n", "<leader>tf", ":TestNearest -strategy=neovim -v<CR>") -- run seleceted test

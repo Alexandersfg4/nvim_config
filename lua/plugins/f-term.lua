@@ -12,8 +12,8 @@ fterm.setup({
   auto_close = false,
   dimensions = {
     height = 0.4, -- Height of the terminal window
-    width = 0.5, -- Width of the terminal window
-    x = 0.9, -- X axis of the terminal window
+    width = 0.3, -- Width of the terminal window
+    x = 1, -- X axis of the terminal window
     y = 0.8, -- Y axis of the terminal window
   },
 })

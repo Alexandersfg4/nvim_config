@@ -108,6 +108,11 @@ return packer.startup(function(use)
   -- Chat GPT plugin
   use("madox2/vim-ai")
 
+  -- A Vim wrapper for running tests on different granularities.
+  use("vim-test/vim-test")
+  -- Go plugin
+  use("fatih/vim-go")
+
   if packer_bootstrap then
     require("packer").sync()
   end

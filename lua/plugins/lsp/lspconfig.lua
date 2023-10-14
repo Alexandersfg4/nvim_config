@@ -21,7 +21,7 @@ local keymap = vim.keymap -- for conciseness
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
   -- keybind options
-  local opts = { noremap = true, silent = false, buffer = bufnr }
+  local opts = { noremap = true, silent = true, buffer = bufnr }
 
   -- set keybinds
   keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
@@ -31,8 +31,8 @@ local on_attach = function(client, bufnr)
   if client.name == "gopls" then
     keymap.set("n", "<leader>rf", ":GoRename<CR>") -- rename function
     keymap.set("n", "<leader>fu", ":GoReferrers<CR>") -- find usages
-    keymap.set("n", "<leader>ta", ":GoTest<CR>") -- run all tests
-    keymap.set("n", "<leader>tf", ":GoTestFunc<CR>") -- run seleceted test
+    keymap.set("n", "<leader>k", ":GoDoc<CR>") -- find usages
+    keymap.set("n", "<leader>rp", '<CMD>lua require("FTerm").run({ "make", "run"} )<CR>')
     keymap.set("n", "<leader>tp", '<CMD>lua require("FTerm").run({ "go", "test", "./...", "-v" } )<CR>') -- run all tests requrcevly
   end
 end
@@ -58,6 +58,10 @@ lspconfig["html"].setup({
 lspconfig["gopls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
+  settings = {
+    completeUnimported = true,
+    usePlaceholders = true,
+  },
 })
 
 -- configure python server
